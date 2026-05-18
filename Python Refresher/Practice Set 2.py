@@ -1,247 +1,385 @@
-# Loops
+# =========================
+# A. Loops
+# =========================
 
-# 1.
-# for i in range(1,11):
-#     print(i)
+# 1. Difference between for loop and while loop
 
-# 2.
-# count = 5
-# while count >=1:
-#     print(count)
-#     count -=1
+# for loop:
+# Used when the number of iterations is known.
 
-# 3.
-# for i in range (1,20):
-#     if i %2==0:
-#         print(i)
+# while loop:
+# Used when the number of iterations is unknown
+# and depends on a condition.
 
-# 4.
-# for i in range(1,10):
-#     if i ==5:
-#         continue
-#     print(i)
 
-# List
+# 2. Write a for loop to print all numbers from 1 to 10
 
-# 1.
+for i in range(1, 11):
+    print(i)
 
-# num_list = [1,2,3,4,5]
-# num_list[1]=5
-# print(num_list)
 
-# 2.
-# num_list = [1,2,3,4,5]
-# num_list.append(56)
-# print(num_list)
+# 3. Write a while loop that prints numbers from 5 to 1 in reverse order
 
-# 3.
-# num_list1 = [1,2,3,4,5]
-# num_list2 = [6,7,8,9,10]
-# l = num_list1.extend(num_list2)
-# print(num_list1)
+count = 5
 
-# 4.
-# num_list = [1,2,3,4,5]
-# num_list.insert(1,56)
-# print(num_list)
+while count >= 1:
+    print(count)
+    count -= 1
 
-# 5.
-# org_list = [54,6,3,8,2,1]
-# print(f"Original List : {org_list}")
-# org_list.sort()
-# print(f"Sorted List : {org_list}")
 
-# Tuples
+# 4. Write a loop that prints all even numbers from 1 to 20
 
-# 1.
-# numbers = (1, 2, 3)
-# print(numbers[1])
+for i in range(1, 21):
+    if i % 2 == 0:
+        print(i)
 
-# 2.
-# numbers = ("Sahil",89,92.83)
-# name,roll_no,percentage=numbers
-# print(name)
-# print(roll_no)
-# print(percentage)
 
-# 3.
-# single_element=(10,)
-# print(single_element)
+# 5. Write a loop that skips the number 5 and stops when it reaches 10
 
-# 4.
-# numbers = (1,4,1,4,1,1,2, 3)
-# print(numbers.count(1))
-# print(numbers.index(2))
+for i in range(1, 11):
 
-# Sets
+    if i == 5:
+        continue
 
-# 1.
-# set_value = set([1,4,1,4,1,1,2,3])
-# print(set_value)
+    if i == 10:
+        break
 
-# 2.
-# set_value = {1, 2, 3, 4, 5}
-# set_value.add(10)
-# print(set_value)
+    print(i)
 
-# 3.
-# set_value = {1, 2, 3, 4, 5}
-# set_value.update([100,56,47,98,35])
-# print(set_value)
 
-# 4.
-# set1 = {1, 2, 3, 4, 5}
-# set2 = {6, 7, 8, 10}
-# union_set=set1.union(set2)
-# print(union_set)
+# =========================
+# B. Lists
+# =========================
 
-# 5
-# set1 = {1, 2, 3, 4, 5}
-# set2 = {4, 5, 6, 7, 8}
-# interSection = set1.intersection(set2)
-# print(interSection)
+# 6. Create a list of five numbers and change the second element
 
-# Dictionaries
+num_list = [1, 2, 3, 4, 5]
 
-# 1.
-# Student  = {
-#     "name":"Sahil",
-#     "age":19,
-#     "grade":"Fail"
-# }
+num_list[1] = 50
 
-# 2
-# Student  = {
-#     "name":"Sahil",
-#     "age":19,
-#     "grade":"Fail"
-# }
-# print(Student["name"])
-# print(Student["age"])
-# print(Student["grade"])
+print(num_list)
 
-# 3
-# Student  = {
-#     "name":"Sahil",
-#     "age":19,
-#     "grade":"Fail"
-# }
-# print(Student.get("age"))
-# print(Student.get("height","Not Given"))
 
-# 4.
-# dict1 = {
-#     "name":"Sahil",
-#     "age":19,
-#     "grade":"Fail"
-# }
-# dict1.update(
-#     {
-#         "age":19,
-#         "Hobby":"Game"
-#     }
-# )
-# print(dict1)
+# 7. Use append() to add a new item to a list
 
-# File Handling ANd JSON
-# 1.
-# file = open("example.txt", "w")
-# file.write("Hello This is Written in Python")
+num_list = [1, 2, 3, 4, 5]
 
-# 2.
-# with open("example.txt","r") as f:
-#     content  = f.read()
-#     print(content)
+num_list.append(56)
 
-# 3
-# import json
+print(num_list)
 
-# dict_data={
-#     "name":"Sahil",
-#     "age":19,
-#     "grade":"Fail"
-# }
 
-# with open("data.json","w") as js:
-#     json.dump(dict_data,js)
+# 8. Use extend() to merge two lists
 
-# 4.
-# import json
-# with open("data.json","r") as js:
-#     content = json.load(js)
-#     print(content)
+num_list1 = [1, 2, 3, 4, 5]
+num_list2 = [6, 7, 8, 9, 10]
 
-# 5.
-# file = open("example.txt", "a")
-# for i in range(1,50):
-#     file.write('\n This is Appended Text')
-# file.close()
+num_list1.extend(num_list2)
 
-# Extra
+print(num_list1)
 
-# 1
-# list_item = [1,2,3,4,5,6,7,8,9,10]
 
-# for item in list_item:
-#     if item % 2 ==0:
-#         print(item)
+# 9. Write code to insert a value at index 2 in a list
 
-# 2.
-# Student_dictionary = {
-#     "Name":"Sahil",
-#     "Age":19,
-#     "Grade":"Fail",
-#     "Hobby":"Gamer"
-# }
-# print(f'keys : {Student_dictionary.keys()}')
-# print(f'Values : {Student_dictionary.values()}')
-# print(f'Both Keys And Values : {Student_dictionary}')
+num_list = [1, 2, 3, 4, 5]
 
-# 3.
-# with open("example.txt","w") as f:
-#     f.write("Writed Text")
-# with open("example.txt","r") as f:
-#     print(f.read())
+num_list.insert(2, 56)
 
-# 4. 
-# import json
-# data={
-#     "Name":"Sahil",
-#     "Age":19,
-#     "Grade":"Fail",
-#     "Hobby":"Gamer"
-# }
-# file = open('dictionary_data.json',"w")
-# json.dump(data,file)
-# file.close()
-# file = open('dictionary_data.json',"r")
-# conveted_json = json.load(file)
-# print(conveted_json)
+print(num_list)
 
-# 5.
-# Create a class with one attribute and one method
-# Approch 1
-# class Student:
-#     def __init__(self):
-#         self.name = "Sahil"
-#         self.age = 19
 
-#     def info(data,name,age):
-#         print(data.name)
-#         print(data.age)
+# 10. Sort a list in ascending order and print both the original and sorted versions
 
-# std = Student()
-# std.info("Admin",34)
+org_list = [54, 6, 3, 8, 2, 1]
 
-# # Approch 2
-# class Student:
-#     def __init__(self,name,age):
-#         self.name = name
-#         self.age = age
+print(f"Original List : {org_list}")
 
-#     def info(self):
-#         print(self.name)
-#         print(self.age)
+sorted_list = sorted(org_list)
 
-# std = Student("Sahil",19)
-# std.info()
+print(f"Sorted List : {sorted_list}")
+
+
+# =========================
+# C. Tuples
+# =========================
+
+# 11. What is a tuple, and how is it different from a list?
+
+# Tuple:
+# A tuple is an ordered collection of items.
+
+# Difference:
+# Tuples are immutable (cannot be changed),
+# while lists are mutable (can be changed).
+
+
+# 12. Create a tuple with three items and print the second item
+
+numbers = (1, 2, 3)
+
+print(numbers[1])
+
+
+# 13. Write code to unpack a tuple into three variables
+
+numbers = ("Sahil", 89, 92.83)
+
+name, roll_no, percentage = numbers
+
+print(name)
+print(roll_no)
+print(percentage)
+
+
+# 14. Create a single-element tuple and print its type
+
+single_element = (10,)
+
+print(single_element)
+print(type(single_element))
+
+
+# 15. Write code to use count() and index() on a tuple
+
+numbers = (1, 4, 1, 4, 1, 1, 2, 3)
+
+print(numbers.count(1))
+print(numbers.index(2))
+
+
+# =========================
+# D. Sets
+# =========================
+
+# 16. Create a set from a list with duplicate values
+
+set_value = set([1, 4, 1, 4, 1, 1, 2, 3])
+
+print(set_value)
+
+
+# 17. Add a new element to a set using add()
+
+set_value = {1, 2, 3, 4, 5}
+
+set_value.add(10)
+
+print(set_value)
+
+
+# 18. Use update() to add multiple items to a set
+
+set_value = {1, 2, 3, 4, 5}
+
+set_value.update([100, 56, 47, 98, 35])
+
+print(set_value)
+
+
+# 19. Write code to find the union of two sets and print the result
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {6, 7, 8, 10}
+
+union_set = set1.union(set2)
+
+print(union_set)
+
+
+# 20. Write code to find the intersection of two sets and print the result
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+intersection_set = set1.intersection(set2)
+
+print(intersection_set)
+
+
+# =========================
+# E. Dictionaries
+# =========================
+
+# 21. What is a dictionary in Python?
+
+# Dictionary:
+# A dictionary is a collection of key-value pairs.
+
+
+# 22. Create a dictionary for a student with name, age, and grade
+
+student = {
+    "name": "Sahil",
+    "age": 19,
+    "grade": "Fail"
+}
+
+print(student)
+
+
+# 23. Access a value using a key and print it
+
+print(student["name"])
+print(student["age"])
+print(student["grade"])
+
+
+# 24. Use get() to access a missing key with a default value
+
+print(student.get("age"))
+
+print(student.get("height", "Not Given"))
+
+
+# 25. Use update() to change one value and add one new key
+
+student.update({
+    "age": 20,
+    "hobby": "Gaming"
+})
+
+print(student)
+
+
+# =========================
+# F. File Handling and JSON
+# =========================
+
+# 26. Write code to create a text file and write a line into it
+
+file = open("example.txt", "w")
+
+file.write("Hello This is Written in Python")
+
+file.close()
+
+
+# 27. Write code to read the contents of a text file using with open()
+
+with open("example.txt", "r") as f:
+    content = f.read()
+    print(content)
+
+
+# 28. Save a Python dictionary to a JSON file
+
+import json
+
+dict_data = {
+    "name": "Sahil",
+    "age": 19,
+    "grade": "Fail"
+}
+
+with open("data.json", "w") as js:
+    json.dump(dict_data, js)
+
+
+# 29. Read a JSON file and convert it back into a Python object
+
+with open("data.json", "r") as js:
+    content = json.load(js)
+    print(content)
+
+
+# 30. Write code to append a new line to an existing file
+
+file = open("example.txt", "a")
+
+for i in range(1, 5):
+    file.write("\nThis is Appended Text")
+
+file.close()
+
+
+# =========================
+# Challenge Tasks
+# =========================
+
+# 1. Write a small program that uses a list, a loop, and a condition together
+
+list_item = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for item in list_item:
+    if item % 2 == 0:
+        print(item)
+
+
+# 2. Create a dictionary of student details and print all key-value pairs
+
+student_dictionary = {
+    "Name": "Sahil",
+    "Age": 19,
+    "Grade": "Fail",
+    "Hobby": "Gamer"
+}
+
+for key, value in student_dictionary.items():
+    print(key, ":", value)
+
+
+# 3. Read and write a text file using with open()
+
+with open("example.txt", "w") as f:
+    f.write("Written Text")
+
+with open("example.txt", "r") as f:
+    print(f.read())
+
+
+# 4. Convert a Python dictionary to JSON and back
+
+import json
+
+data = {
+    "Name": "Sahil",
+    "Age": 19,
+    "Grade": "Fail",
+    "Hobby": "Gamer"
+}
+
+with open("dictionary_data.json", "w") as file:
+    json.dump(data, file)
+
+with open("dictionary_data.json", "r") as file:
+    converted_json = json.load(file)
+
+print(converted_json)
+
+
+# 5. Create a class with one attribute and one method
+
+# Approach 1
+
+class Student:
+
+    def __init__(self):
+        self.name = "Sahil"
+        self.age = 19
+
+    def info(self):
+        print(self.name)
+        print(self.age)
+
+
+std = Student()
+
+std.info()
+
+
+# Approach 2
+
+class Student:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(self.name)
+        print(self.age)
+
+
+std = Student("Sahil", 19)
+
+std.info()
